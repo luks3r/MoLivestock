@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "molivestock",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "MoLivestock",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "Lukser"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,16 +14,19 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/molivestock/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      {
+        "adapter": "kotlin",
+        "value": "net.lukser.molivestock.MoLivestock"
+      }
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "molivestock.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.8.7",
